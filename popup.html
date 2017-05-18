@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            width:520px;
+            padding:0;
+        }
+        .info {
+            margin:0;
+        }
+        .earning-rate{
+            margin:0;
+        }
+        .earning-rate table tbody tr td{
+            vertical-align: middle;
+        }
+        .investment-text{
+            font-weight:bold;
+            color: #ff2a2e;
+        }
+        .monthly-money-text{
+            font-weight:bold;
+            color: #247aff;
+        }
+        .base-rate{
+            font-weight:bold;
+            color: #009023;
+        }
+        .leverage-rate{
+            font-weight:bold;
+            color: #009023;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="popup.js"></script>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+</head>
+<body>
+    <div class="panel panel-default info">
+        <div class="panel-heading">경매 물건 정보</div>
+        <div class="panel-body">
+            <table class="table table-bordered table-condensed info">
+                <tr><td>사건번호</td><td class="no"></td></tr>
+                <tr><td>입찰기일</td><td class="d-day"></td></tr>
+                <tr><td>입찰보증금</td><td class="bid-deposit"></td></tr>
+                <tr><td>주소</td><td class="addr"></td></tr>
+                <tr><td>감정가</td><td class="appraised-value"></td></tr>
+                <tr><td>물건종별</td><td class="type"></td></tr>
+                <tr><td>층수</td><td class="floor"></td></tr>
+                <tr><td>전용면적</td><td class="exclusive-size"></td></tr>
+                <tr><td>구조</td><td class="structure"></td></tr>
+                <tr><td>보존등기</td><td class="completed-at"></td></tr>
+                <tr><td>보증금</td><td class="deposit-text"></td></tr>
+                <tr><td>차임</td><td class="rent-price-text"></td></tr>
+            </table>
+        </div>
+        <!--<div class="panel-footer"><div class="btn btn-info btn-copy">복사</div></div>-->
+    </div>
+
+    <div class="panel panel-default earning-rate">
+        <div class="panel-heading">수익률 계산</div>
+        <div class="panel-body">
+            <table class="table table-bordered table-condensed info text-right">
+                <tr><td>감정가</td><td class="appraised-value"></td></tr>
+                <tr><td>낙찰가율</td><td class=""><input class="form-control recent-percent text-right" /></td></tr>
+                <tr><td>낙찰가</td><td class=""><input class="form-control price text-right" /></td></tr>
+                <tr><td>대출금</td><td class="loan-text"></td></tr>
+                <tr><td>대출금리</td><td class=""><input class="form-control interest-rate text-right" value="3.5" /></td></tr>
+                <tr><td>취득세</td><td class=""><input class="form-control tax text-right" /></td></tr>
+                <tr><td>법무비</td><td class=""><input class="form-control judicial-fee text-right" /></td></tr>
+                <tr><td>명도비</td><td class=""><input class="form-control move-fee text-right" /></td></tr>
+                <tr><td>수리비</td><td class=""><input class="form-control repair text-right" value="0" /></td></tr>
+                <tr><td>중개수수료</td><td class=""><input class="form-control mediation-fee text-right" /></td></tr>
+                <tr><td>기타잡비</td><td><input class="form-control etc text-right" /></td></tr>
+                <tr><td>보증금</td><td class=""><input class="form-control deposit text-right" value="0" /></td></tr>
+                <tr><td>차임</td><td class=""><input class="form-control rent-price text-right" value="0" /></td></tr>
+                <tr><td>대출이자</td><td><span class="interest-text"></span></td></tr>
+                <tr><td>월순수익</td><td><span class="monthly-money-text"></span></td></tr>
+                <tr><td>실투자금</td><td><span class="investment-text"></span></td></tr>
+                <tr><td>기본수익률</td><td><span class="base-rate"></span>%</td></tr>
+                <tr><td>레버리지수익률</td><td><span class="leverage-rate"></span>%</td></tr>
+            </table>
+            <input type="hidden" class="monthly-money">
+            <!--<input type="hidden" class="recent-percent">-->
+        </div>
+    </div>
+
+</body>
+</html>
